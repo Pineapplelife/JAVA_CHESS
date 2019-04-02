@@ -30,8 +30,8 @@ public class ChessModel implements IChess {
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
         Piece piece = chessBoard.getPiece(p);
-        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT){
-            if (piece == null){
+        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT) {
+            if (piece == null) {
                 throw new EmptyCellException();
             }
         } else {
@@ -43,8 +43,8 @@ public class ChessModel implements IChess {
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
         Piece piece = chessBoard.getPiece(p);
-        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT){
-            if (piece == null){
+        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT) {
+            if (piece == null) {
                 throw new EmptyCellException();
             }
         } else {
@@ -55,7 +55,7 @@ public class ChessModel implements IChess {
 
     @Override
     public int getNbRemainingPieces(ChessColor color) {
-        return 0;
+        return chessBoard.getRemainingPieces(color);
     }
 
     @Override
@@ -87,4 +87,6 @@ public class ChessModel implements IChess {
     public long getPlayerDuration(ChessColor color, boolean isPlaying) {
         return 0;
     }
+
+
 }

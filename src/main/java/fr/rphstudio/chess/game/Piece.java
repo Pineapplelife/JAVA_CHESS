@@ -8,7 +8,7 @@ public class Piece {
     private ChessColor color;
     private ChessType type;
 
-    public Piece(ChessColor c, ChessType t) {
+    public Piece(ChessColor c, ChessType t) { //ToDo : Ajouter IMove au constructeur
         this.color = c;
         this.type = t;
     }
@@ -20,4 +20,6 @@ public class Piece {
     public ChessType getPieceType() {
         return type;
     }
+
+    //ToDo : List<position> getMoves(pos, board)
 }

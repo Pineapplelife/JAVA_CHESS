@@ -59,4 +59,22 @@ public class ChessBoard {
         }
         return piece;
     }
+
+    public int getRemainingPieces(IChess.ChessColor color) {
+        int count = 0;
+        Piece pi;
+
+        for (int x = 0; x < IChess.BOARD_WIDTH; x++) {
+            for (int y = 0; y < IChess.BOARD_HEIGHT; y++) {
+                pi = this.board[x][y];
+                if (pi != null) {
+                    if (color == pi.getPieceColor()) {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
 }
