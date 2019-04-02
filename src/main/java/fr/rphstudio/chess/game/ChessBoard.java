@@ -13,6 +13,8 @@ public class ChessBoard {
             for (int y = 0; y < IChess.BOARD_HEIGHT; y++) {
                 IChess.ChessColor color;
                 IChess.ChessType typ;
+                IMove move;
+
                 if (y <= 1) {
                     color = IChess.ChessColor.CLR_BLACK;
                 } else if (y >= 6) {
@@ -22,31 +24,37 @@ public class ChessBoard {
                 }
                 if (y == 1 || y == 6) {
                     typ = IChess.ChessType.TYP_PAWN;
+                    move = new KnightMove();
                 } else {
                     switch (x) {
                         case IChess.BOARD_POS_X_QUEENSIDE_ROOK:
                         case IChess.BOARD_POS_X_KINGSIDE_ROOK:
                             typ = IChess.ChessType.TYP_ROOK;
+                            move = new KnightMove();
                             break;
                         case IChess.BOARD_POS_X_QUEENSIDE_KNIGHT:
                         case IChess.BOARD_POS_X_KINGSIDE_KNIGHT:
                             typ = IChess.ChessType.TYP_KNIGHT;
+                            move = new KnightMove();
                             break;
                         case IChess.BOARD_POS_X_QUEENSIDE_BISHOP:
                         case IChess.BOARD_POS_X_KINGSIDE_BISHOP:
                             typ = IChess.ChessType.TYP_BISHOP;
+                            move = new KnightMove();
                             break;
                         case IChess.BOARD_POS_X_KING:
                             typ = IChess.ChessType.TYP_KING;
+                            move = new KnightMove();
                             break;
                         case IChess.BOARD_POS_X_QUEEN:
                             typ = IChess.ChessType.TYP_QUEEN;
+                            move = new KnightMove();
                             break;
                         default:
                             throw new Error();
                     }
                 }
-                board[x][y] = new Piece(color, typ);
+                board[x][y] = new Piece(color, typ, move);
             }
         }
     }

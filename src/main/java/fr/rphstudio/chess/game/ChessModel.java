@@ -60,6 +60,11 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
+        Piece pi = this.chessBoard.getPiece(p);
+        if (pi != null){
+            return pi.getMoves(p, chessBoard);
+        }
+
         return new ArrayList<ChessPosition>();
     }
 
