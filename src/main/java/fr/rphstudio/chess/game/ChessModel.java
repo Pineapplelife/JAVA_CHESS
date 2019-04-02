@@ -9,32 +9,48 @@ import java.util.List;
 
 public class ChessModel implements IChess {
 
+    private ChessBoard chessBoard;
     private static ChessModel INSTANCE;
 
-    public ChessModel (){
+    private ChessModel() {
     }
 
-    public static ChessModel getInstance(){
-        if (ChessModel.INSTANCE == null){
+    public static ChessModel getInstance() {
+        if (ChessModel.INSTANCE == null) {
             ChessModel.INSTANCE = new ChessModel();
         }
         return ChessModel.INSTANCE;
     }
 
-
     @Override
     public void reinit() {
-
+        this.chessBoard = new ChessBoard();
     }
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return ChessType.TYP_QUEEN;
+        Piece piece = chessBoard.getPiece(p);
+        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT){
+            if (piece == null){
+                throw new EmptyCellException();
+            }
+        } else {
+            throw new OutOfBoardException();
+        }
+        return piece.getPieceType();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return ChessColor.CLR_WHITE;
+        Piece piece = chessBoard.getPiece(p);
+        if (p.x < IChess.BOARD_WIDTH && p.x >= 0 && p.y >= 0 && p.y < IChess.BOARD_HEIGHT){
+            if (piece == null){
+                throw new EmptyCellException();
+            }
+        } else {
+            throw new OutOfBoardException();
+        }
+        return piece.getPieceColor();
     }
 
     @Override

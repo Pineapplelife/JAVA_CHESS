@@ -1,8 +1,10 @@
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/interf/IChess.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/interf/ChessException.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/game/ChessModel.java
-/Users/gueriboutmathieu/Desktop/POO ADVANCED JAVA /ECHEC DEV/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/ChessBoard.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/IChess.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/ChessModel.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/ChessException.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/Piece.java
