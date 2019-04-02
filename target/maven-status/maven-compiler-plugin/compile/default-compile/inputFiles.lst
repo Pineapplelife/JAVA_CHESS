@@ -1,10 +1,17 @@
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/ChessBoard.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/IChess.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/ChessModel.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/ChessException.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
-/Users/dearaujojordan/Downloads/Romuald78-chesspublic-575597261666/src/main/java/fr/rphstudio/chess/game/Piece.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\ChessException.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\MainLauncher.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\BishopMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\EmptyCellException.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\ChessFontManager.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\IChess.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\QueenMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\KnightMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\Piece.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\IMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\OutOfBoardException.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\RookMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\ChessGameController.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\ChessBoard.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\ChessModel.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\KingMove.java
+C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\PawnMove.java
