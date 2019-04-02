@@ -13,13 +13,14 @@ public class KnightMove implements IMove {
         List<IChess.ChessPosition> chessPositionList = new ArrayList<>();
         List<IChess.ChessPosition> chessIsPossibleMove = new ArrayList<>();
 
-        //list avec les positions possible, on parcours et on boucle dessus pour vérifier
-        //vérifier si la pièce est dans le board
-        //vérifier si la position ou l'on veut aller est vide ou avec une pièce =/= de couleur différente`
-
-        chessPositionList.add(new IChess.ChessPosition(position.x, position.y - 1));
-        chessPositionList.add(new IChess.ChessPosition(position.x, position.y + 1));
-
+        chessPositionList.add(new IChess.ChessPosition(position.x + 1, position.y - 2));
+        chessPositionList.add(new IChess.ChessPosition(position.x + 1, position.y + 2));
+        chessPositionList.add(new IChess.ChessPosition(position.x - 1, position.y - 2));
+        chessPositionList.add(new IChess.ChessPosition(position.x - 1, position.y + 2));
+        chessPositionList.add(new IChess.ChessPosition(position.x + 2, position.y - 1));
+        chessPositionList.add(new IChess.ChessPosition(position.x + 2, position.y + 1));
+        chessPositionList.add(new IChess.ChessPosition(position.x - 2, position.y - 1));
+        chessPositionList.add(new IChess.ChessPosition(position.x - 2, position.y + 1));
         Piece myPiece = board.getPiece(position);
 
         for (int i = 0; i < chessPositionList.size(); i++) {

@@ -24,13 +24,13 @@ public class ChessBoard {
                 }
                 if (y == 1 || y == 6) {
                     typ = IChess.ChessType.TYP_PAWN;
-                    move = new KnightMove();
+                    move = new PawnMove();
                 } else {
                     switch (x) {
                         case IChess.BOARD_POS_X_QUEENSIDE_ROOK:
                         case IChess.BOARD_POS_X_KINGSIDE_ROOK:
                             typ = IChess.ChessType.TYP_ROOK;
-                            move = new KnightMove();
+                            move = new PawnMove();
                             break;
                         case IChess.BOARD_POS_X_QUEENSIDE_KNIGHT:
                         case IChess.BOARD_POS_X_KINGSIDE_KNIGHT:
@@ -40,15 +40,15 @@ public class ChessBoard {
                         case IChess.BOARD_POS_X_QUEENSIDE_BISHOP:
                         case IChess.BOARD_POS_X_KINGSIDE_BISHOP:
                             typ = IChess.ChessType.TYP_BISHOP;
-                            move = new KnightMove();
+                            move = new PawnMove();
                             break;
                         case IChess.BOARD_POS_X_KING:
                             typ = IChess.ChessType.TYP_KING;
-                            move = new KnightMove();
+                            move = new PawnMove();
                             break;
                         case IChess.BOARD_POS_X_QUEEN:
                             typ = IChess.ChessType.TYP_QUEEN;
-                            move = new KnightMove();
+                            move = new PawnMove();
                             break;
                         default:
                             throw new Error();
@@ -83,6 +83,11 @@ public class ChessBoard {
             }
         }
         return count;
+    }
+
+    public void movePiece(IChess.ChessPosition p0, IChess.ChessPosition p1){
+        this.board[p1.x][p1.y] = this.board[p0.x][p0.y];
+        this.board[p0.x][p0.y] = null;
     }
 
 }

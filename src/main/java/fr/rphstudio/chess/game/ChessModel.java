@@ -65,12 +65,12 @@ public class ChessModel implements IChess {
             return pi.getMoves(p, chessBoard);
         }
 
-        return new ArrayList<ChessPosition>();
+        return new ArrayList<>();
     }
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-
+        this.chessBoard.movePiece(p0, p1);
     }
 
     @Override
