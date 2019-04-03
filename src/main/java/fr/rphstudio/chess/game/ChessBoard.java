@@ -44,7 +44,7 @@ public class ChessBoard {
                             break;
                         case IChess.BOARD_POS_X_KING:
                             typ = IChess.ChessType.TYP_KING;
-                            move = new PawnMove();
+                            move = new KingMove();
                             break;
                         case IChess.BOARD_POS_X_QUEEN:
                             typ = IChess.ChessType.TYP_QUEEN;
