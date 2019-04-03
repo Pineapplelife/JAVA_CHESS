@@ -8,6 +8,7 @@ public class PawnMove implements IMove {
     @Override
     public List<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition position, ChessBoard board) {
         List<IChess.ChessPosition> chessPositionList;
+        Piece myPiece = board.getPiece(position);
 
         chessPositionList = new ArrayList<IChess.ChessPosition>();
         Piece myPiece = board.getPiece(position);
