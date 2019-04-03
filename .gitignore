@@ -23,6 +23,7 @@ release.properties
 ##########################
 *.iml
 .idea/
+target/
 *.ipr
 *.iws
 out/
