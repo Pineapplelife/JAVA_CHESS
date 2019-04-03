@@ -11,6 +11,7 @@ public class ChessModel implements IChess {
 
     private ChessBoard chessBoard;
     private static ChessModel INSTANCE;
+    private PieceManager pieceManager;
 
     private ChessModel() {
     }
@@ -25,6 +26,7 @@ public class ChessModel implements IChess {
     @Override
     public void reinit() {
         this.chessBoard = new ChessBoard();
+        this.pieceManager = new PieceManager();
     }
 
     @Override
@@ -70,6 +72,10 @@ public class ChessModel implements IChess {
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
+        Piece piece = this.chessBoard.getPiece(p1);
+        if (piece != null) {
+            pieceManager.addPiece(piece);
+        }
         this.chessBoard.movePiece(p0, p1);
     }
 
@@ -80,7 +86,7 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
-        return new ArrayList<ChessType>();
+        return pieceManager.getRemovedPieces(color);
     }
 
     @Override
