@@ -12,13 +12,6 @@ public class PawnMove implements IMove {
         Piece myPiece = board.getPiece(position);
         List<IChess.ChessPosition> chessIsPossibleMove = new ArrayList<>();
 
-
-<<<<<<< HEAD
-        chessPositionList = new ArrayList<IChess.ChessPosition>();
-        Piece myPiece = board.getPiece(position);
-=======
->>>>>>> master
-
         if (!myPiece.hasMovedYet()) {
             if (myPiece.getPieceColor() == IChess.ChessColor.CLR_BLACK) {
                 chessPositionList.add(new IChess.ChessPosition(position.x, position.y + 1));
