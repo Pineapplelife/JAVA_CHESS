@@ -30,6 +30,8 @@ public class PawnMove implements IMove {
         }
 
 
+
+
         for (int i = 0; i < chessPositionList.size(); i++) {
             IChess.ChessPosition posTemp = chessPositionList.get(i);
 

@@ -8,13 +8,16 @@ public class History {
     private Piece startPiece;
     private IChess.ChessPosition savePos1;
     private Piece endPiece;
+    private long timer;
 
-    public History(IChess.ChessPosition savePos0, Piece startPiece, IChess.ChessPosition savePos1, Piece endPiece) {
+    public History(IChess.ChessPosition savePos0, Piece startPiece, IChess.ChessPosition savePos1, Piece endPiece, long timer) {
         this.savePos0 = savePos0;
         this.startPiece = startPiece;
         this.savePos1 = savePos1;
         this.endPiece = endPiece;
+        this.timer = timer;
     }
+
 
     public IChess.ChessPosition getSavePos0() {
         return savePos0;
@@ -30,5 +33,9 @@ public class History {
 
     public Piece getEndPiece() {
         return endPiece;
+    }
+
+    public long getTimer() {
+        return timer;
     }
 }

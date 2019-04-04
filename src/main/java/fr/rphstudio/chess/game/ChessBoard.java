@@ -11,8 +11,16 @@ public class ChessBoard {
     private List<History> historyList = new ArrayList<>();
     private ChessBoard chessBoard;
 
+    private long timerSave;
+    private long whiteTimer;
+    private long blackTimer;
+
+
     public ChessBoard() {
         this.board = new Piece[IChess.BOARD_WIDTH][IChess.BOARD_HEIGHT];
+        this.timerSave = System.currentTimeMillis();
+        this.whiteTimer = 0;
+        this.blackTimer = 0;
 
         for (int x = 0; x < IChess.BOARD_WIDTH; x++) {
             for (int y = 0; y < IChess.BOARD_HEIGHT; y++) {
@@ -92,12 +100,24 @@ public class ChessBoard {
 
     public void movePiece(IChess.ChessPosition p0, IChess.ChessPosition p1) {
         Piece endPos = null;
-        if(this.board[p1.x][p1.y] != null){
+
+        long tempTimer = System.currentTimeMillis() - this.timerSave;
+
+        if (this.getPiece(p0).getPieceColor() == IChess.ChessColor.CLR_WHITE) {
+            this.whiteTimer += (System.currentTimeMillis() - this.timerSave);
+        } else {
+            this.blackTimer += (System.currentTimeMillis() - this.timerSave);
+        }
+
+        this.timerSave = System.currentTimeMillis();
+
+
+        if (this.board[p1.x][p1.y] != null) {
             endPos = this.board[p1.x][p1.y];
         }
 
 
-        historyList.add(new History(p0, this.board[p0.x][p0.y], p1, endPos));
+        historyList.add(new History(p0, this.board[p0.x][p0.y], p1, endPos, tempTimer));
 
 
         this.board[p1.x][p1.y] = this.board[p0.x][p0.y];
@@ -154,6 +174,7 @@ public class ChessBoard {
             IChess.ChessPosition savePos0 = historyList.get(historyList.size() - 1).getSavePos0();
             Piece endPiece = historyList.get(historyList.size() - 1).getEndPiece();
             IChess.ChessPosition savePos1 = historyList.get(historyList.size() - 1).getSavePos1();
+            long timerTest = historyList.get(historyList.size() - 1).getTimer();
 
 
             this.board[savePos0.x][savePos0.y] = startPiece;
@@ -162,13 +183,38 @@ public class ChessBoard {
                 this.board[savePos1.x][savePos1.y] = null;
             } else {
                 this.board[savePos1.x][savePos1.y] = endPiece;
+
+                if (endPiece.getPieceColor() == IChess.ChessColor.CLR_BLACK) {
+                    this.whiteTimer -= timerTest;
+                } else {
+                    this.blackTimer -= timerTest;
+                }
+
             }
 
+            this.timerSave = System.currentTimeMillis();
             startPiece.decreaseNbMoves();
-            historyList.remove(historyList.size()-1);
+            historyList.remove(historyList.size() - 1);
             return true;
         } else {
             return false;
+        }
+    }
+
+    public long getCurrentPlayerTimer(IChess.ChessColor color, boolean isPlayerPlaying) {
+        if (color == IChess.ChessColor.CLR_BLACK) {
+            if (isPlayerPlaying == true) {
+                return System.currentTimeMillis() - this.timerSave + blackTimer;
+            } else {
+                return this.blackTimer;
+            }
+
+        } else {
+            if (isPlayerPlaying == true) {
+                return System.currentTimeMillis() - this.timerSave + whiteTimer;
+            } else {
+                return this.whiteTimer;
+            }
         }
     }
 }
