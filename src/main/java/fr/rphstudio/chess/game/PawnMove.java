@@ -1,6 +1,7 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
+
 import java.util.ArrayList;
 import java.util.List;
 

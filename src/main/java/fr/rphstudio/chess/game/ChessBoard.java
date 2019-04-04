@@ -2,6 +2,8 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
 
+import java.util.List;
+
 public class ChessBoard {
 
     private Piece[][] board;
@@ -89,5 +91,41 @@ public class ChessBoard {
         this.board[p1.x][p1.y] = this.board[p0.x][p0.y];
         this.board[p0.x][p0.y] = null;
     }
+
+    private IChess.ChessPosition getKingPosition(IChess.ChessColor color) {
+        for (int x = 0; x < IChess.BOARD_WIDTH; x++) {
+            for (int y = 0; y < IChess.BOARD_HEIGHT; y++) {
+                Piece piece = board[x][y];
+
+                if(null != piece && piece.getPieceColor() == color){
+                    if (piece.getPieceType() == IChess.ChessType.TYP_KING){
+                        return new IChess.ChessPosition(x, y);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    public IChess.ChessKingState getKingState(IChess.ChessColor color){
+        IChess.ChessPosition kingPos = getKingPosition(color);
+        for (int x = 0; x < IChess.BOARD_WIDTH; x++) {
+            for (int y = 0; y < IChess.BOARD_HEIGHT; y++) {
+                Piece piece = board[x][y];
+                IChess.ChessPosition positionE = new IChess.ChessPosition(x, y);
+                if (piece != null) {
+                    if (piece.getPieceColor() != color) {
+                        List<IChess.ChessPosition> myList = piece.getMoves(positionE, this);
+                        for (IChess.ChessPosition pos : myList) {
+                            if (pos.equals(kingPos)) {
+                                return IChess.ChessKingState.KING_THREATEN;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return IChess.ChessKingState.KING_SAFE;
+    }
+
 
 }
