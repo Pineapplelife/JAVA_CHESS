@@ -28,15 +28,15 @@ public class PawnMove implements IMove {
                 chessPositionList.add(new IChess.ChessPosition(position.x, position.y - 1));
             }
         }
+
+
         for (int i = 0; i < chessPositionList.size(); i++) {
             IChess.ChessPosition posTemp = chessPositionList.get(i);
 
             if (posTemp.x < IChess.BOARD_WIDTH && posTemp.x >= 0 && posTemp.y >= 0 && posTemp.y < IChess.BOARD_HEIGHT) {
                 Piece pieceTemp = board.getPiece(posTemp);
                 if (pieceTemp != null) {
-                    if (pieceTemp.getPieceColor() == myPiece.getPieceColor()) {
-                        continue;
-                    }
+                    break;
                 }
                 chessIsPossibleMove.add(posTemp);
             }

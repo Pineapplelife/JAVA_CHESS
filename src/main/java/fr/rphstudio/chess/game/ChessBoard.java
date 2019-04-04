@@ -7,6 +7,7 @@ import java.util.List;
 public class ChessBoard {
 
     private Piece[][] board;
+    
 
     public ChessBoard() {
         this.board = new Piece[IChess.BOARD_WIDTH][IChess.BOARD_HEIGHT];
@@ -127,5 +128,7 @@ public class ChessBoard {
         return IChess.ChessKingState.KING_SAFE;
     }
 
-
+    public void pawnToQueen(IChess.ChessPosition position, IChess.ChessColor color) {
+        this.board[position.x][position.y] = new Piece(color, IChess.ChessType.TYP_QUEEN, new QueenMove());
+    }
 }

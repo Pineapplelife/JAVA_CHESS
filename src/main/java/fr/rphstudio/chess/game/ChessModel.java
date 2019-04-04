@@ -79,6 +79,16 @@ public class ChessModel implements IChess {
         chessBoard.getPiece(p0).increaseNbMoves();
         System.out.println(chessBoard.getPiece(p0).getNbMoves());
         this.chessBoard.movePiece(p0, p1);
+
+        if (chessBoard.getPiece(p1).getPieceType() == ChessType.TYP_PAWN) {
+            if (p1.y == 0 && chessBoard.getPiece(p1).getPieceColor() == ChessColor.CLR_WHITE) {
+                chessBoard.pawnToQueen(p1, ChessColor.CLR_WHITE);
+            }
+
+            if (p1.y == 7 && chessBoard.getPiece(p1).getPieceColor() == ChessColor.CLR_BLACK) {
+                chessBoard.pawnToQueen(p1, ChessColor.CLR_BLACK);
+            }
+        }
     }
 
     @Override
