@@ -11,44 +11,43 @@ public class PawnMove implements IMove {
         List<IChess.ChessPosition> chessPositionList = new ArrayList<>();
         Piece myPiece = board.getPiece(position);
 
+
         if (myPiece.getPieceColor() == IChess.ChessColor.CLR_BLACK) {
+            for(int i = -1; i <= 1; i += 2){
+                IChess.ChessPosition posTemp3 = new IChess.ChessPosition(position.x+i, position.y+1);
+                if(board.getPiece(posTemp3) != null){
+                    if(board.getPiece(posTemp3).getPieceColor() != myPiece.getPieceColor()) {
+                        chessPositionList.add(posTemp3);
+                    }
+                }
+            }
             IChess.ChessPosition posTemp = new IChess.ChessPosition(position.x, position.y+1);
-            for(int i = -1; i < 2; i += 2){
-                posTemp = new IChess.ChessPosition(posTemp.x+i,posTemp.y);
-                if(board.getPiece(posTemp) != null){
-                    if(myPiece.getPieceColor() != board.getPiece(posTemp).getPieceColor()){
-                        chessPositionList.add(posTemp);
+            if(board.getPiece(posTemp) == null){
+                chessPositionList.add(posTemp);
+                IChess.ChessPosition posTemp2 = new IChess.ChessPosition(position.x, position.y+2);
+                if(!myPiece.hasMovedYet()){
+                    chessPositionList.add(posTemp2);
+                }
+            }
+        }
+        else{
+            for(int i = -1; i <= 1; i += 2){
+                IChess.ChessPosition posTemp3 = new IChess.ChessPosition(position.x+i, position.y-1);
+                if(board.getPiece(posTemp3) != null){
+                    if(board.getPiece(posTemp3).getPieceColor() != myPiece.getPieceColor()) {
+                        chessPositionList.add(posTemp3);
                     }
                 }
             }
-            posTemp = new IChess.ChessPosition(position.x, position.y+1);
-            if (board.getPiece(posTemp) == null) {
-                chessPositionList.add(posTemp);
-                if (!myPiece.hasMovedYet()) {
-                    posTemp = new IChess.ChessPosition(posTemp.x, posTemp.y + 1);
-                    chessPositionList.add(posTemp);
-                }
-            }
-        } else {
             IChess.ChessPosition posTemp = new IChess.ChessPosition(position.x, position.y-1);
-            for(int i = -1; i < 2; i += 2){
-                posTemp = new IChess.ChessPosition(posTemp.x+i,posTemp.y);
-                if(board.getPiece(posTemp) != null){
-                    if(myPiece.getPieceColor() != board.getPiece(posTemp).getPieceColor()){
-                        chessPositionList.add(posTemp);
-                    }
-                }
-            }
-            posTemp = new IChess.ChessPosition(position.x, position.y-1);
-            if (board.getPiece(posTemp) == null) {
+            if(board.getPiece(posTemp) == null){
                 chessPositionList.add(posTemp);
-                if (!myPiece.hasMovedYet()) {
-                    posTemp = new IChess.ChessPosition(posTemp.x, posTemp.y - 1);
-                    chessPositionList.add(posTemp);
+                IChess.ChessPosition posTemp2 = new IChess.ChessPosition(position.x, position.y-2);
+                if(!myPiece.hasMovedYet()){
+                    chessPositionList.add(posTemp2);
                 }
             }
         }
         return chessPositionList;
     }
 }
-
