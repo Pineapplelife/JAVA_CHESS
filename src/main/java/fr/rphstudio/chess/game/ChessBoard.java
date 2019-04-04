@@ -30,7 +30,7 @@ public class ChessBoard {
                         case IChess.BOARD_POS_X_QUEENSIDE_ROOK:
                         case IChess.BOARD_POS_X_KINGSIDE_ROOK:
                             typ = IChess.ChessType.TYP_ROOK;
-                            move = new PawnMove();
+                            move = new RookMove();
                             break;
                         case IChess.BOARD_POS_X_QUEENSIDE_KNIGHT:
                         case IChess.BOARD_POS_X_KINGSIDE_KNIGHT:
@@ -40,7 +40,7 @@ public class ChessBoard {
                         case IChess.BOARD_POS_X_QUEENSIDE_BISHOP:
                         case IChess.BOARD_POS_X_KINGSIDE_BISHOP:
                             typ = IChess.ChessType.TYP_BISHOP;
-                            move = new PawnMove();
+                            move = new BishopMove();
                             break;
                         case IChess.BOARD_POS_X_KING:
                             typ = IChess.ChessType.TYP_KING;
