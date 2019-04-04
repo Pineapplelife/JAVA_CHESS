@@ -47,7 +47,8 @@ public class Piece {
     }
 
     public void decreaseNbMoves() {
-        this.nbMoves--;
+        this.setNbMoves(getNbMoves() - 1);
+        System.out.println(nbMoves);
     }
 
     public boolean hasMovedYet() {
