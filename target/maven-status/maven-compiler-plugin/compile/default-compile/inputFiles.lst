@@ -1,17 +1,18 @@
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\ChessException.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\MainLauncher.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\BishopMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\EmptyCellException.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\ChessFontManager.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\IChess.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\QueenMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\KnightMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\Piece.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\IMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\interf\OutOfBoardException.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\RookMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\launcher\ChessGameController.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\ChessBoard.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\ChessModel.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\KingMove.java
-C:\Users\mguer\Desktop\Coding Factory\POO ADVANCED\ECHEC JAVA DEV\src\main\java\fr\rphstudio\chess\game\PawnMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/PawnMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/KingMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/PieceManager.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/BishopMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/ChessBoard.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/interf/IChess.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/ChessModel.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/interf/ChessException.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/IMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/KnightMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/QueenMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/RookMove.java
+/Users/louchelnathan/Desktop/POO_Advanced/JAVA_DEV/src/main/java/fr/rphstudio/chess/game/Piece.java
