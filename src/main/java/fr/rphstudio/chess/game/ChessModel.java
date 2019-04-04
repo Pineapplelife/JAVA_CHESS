@@ -63,7 +63,7 @@ public class ChessModel implements IChess {
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
         Piece pi = this.chessBoard.getPiece(p);
-        if (pi != null){
+        if (pi != null) {
             return pi.getMoves(p, chessBoard);
         }
 
@@ -76,6 +76,8 @@ public class ChessModel implements IChess {
         if (piece != null) {
             pieceManager.addPiece(piece);
         }
+        chessBoard.getPiece(p0).increaseNbMoves();
+        System.out.println(chessBoard.getPiece(p0).getNbMoves());
         this.chessBoard.movePiece(p0, p1);
     }
 

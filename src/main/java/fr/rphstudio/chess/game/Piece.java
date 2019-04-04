@@ -33,8 +33,17 @@ public class Piece {
         return this.move.getPossibleMoves(position, board);
     }
 
+    public int getNbMoves() {
+        return nbMoves;
+    }
+
+    public void setNbMoves(int nbMoves) {
+        this.nbMoves = nbMoves;
+    }
+
     public void increaseNbMoves() {
-        this.nbMoves++;
+        this.setNbMoves(getNbMoves() + 1);
+        System.out.println(nbMoves);
     }
 
     public void decreaseNbMoves() {
