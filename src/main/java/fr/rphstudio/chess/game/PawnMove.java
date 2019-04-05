@@ -6,11 +6,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PawnMove implements IMove {
+
+    /**
+     * Gets the list of possible moves for a piece on the board.
+     * This is up to this method to ensure the moves are possible or not for each piece on the board.
+     * This list may be empty because either there is no possible move or because the requested position is empty or outside the board.
+     * @param position requested piece position.
+     * @param board requested chess board
+     * @return the list of possible moves for the requested piece position. The returned list reference must not be null.
+     */
+
     @Override
     public List<IChess.ChessPosition> getPossibleMoves(IChess.ChessPosition position, ChessBoard board) {
         List<IChess.ChessPosition> chessPositionList = new ArrayList<>();
         Piece myPiece = board.getPiece(position);
 
+        /**
+         * Gets the different case of possible moves for the pawn
+         * Several conditions in order to implements the list of the possible moves.
+         * check if the pawn has moved yet
+         * allow to the pawn to kill in diagonale
+         */
 
         if (myPiece.getPieceColor() == IChess.ChessColor.CLR_BLACK) {
             for(int i = -1; i <= 1; i += 2){
